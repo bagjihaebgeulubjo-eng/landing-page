@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Kiwi - Red Gem from Nature</title>
+    <meta name="description" content="Discover the perfect harmony of sweet red center and refreshing green. Premium Ruby Kiwi.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav style="position: fixed; width: 100%; padding: 2rem; z-index: 100; display: flex; justify-content: space-between; align-items: center;">
+        <div style="font-weight: 800; font-size: 1.5rem; letter-spacing: -1px;">RUBY<span style="color: var(--ruby-red);">KIWI</span></div>
+        <div style="display: flex; align-items: center; gap: 2rem;">
+            <div class="nav-links" style="display: flex; gap: 2rem;">
+                <a href="#" style="color: white; text-decoration: none; font-weight: 600;">Story</a>
+                <a href="#" style="color: white; text-decoration: none; font-weight: 600;">Shop</a>
+            </div>
+            <a href="index.html" class="lang-switch">KR</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="reveal">Nature's<br>Red Gem, Ruby Kiwi</h1>
+                <p class="reveal" style="margin-bottom: 2.5rem; font-size: 1.25rem;">
+                    Unprecedented sweetness you've never experienced. <br>
+                    Feel the vitality of the red glow rising from the inside.
+                </p>
+                <div class="reveal">
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="ruby_kiwi.png" alt="Ruby Kiwi Product Image" class="hero-image">
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="reveal" style="text-align: center;">Why Ruby Kiwi?</h2>
+            <div class="feature-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🍓</div>
+                    <h3>Extreme Sweetness</h3>
+                    <p>Boasts a higher sugar content than regular kiwis, offering a strawberry-like sweet and soft texture.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">✨</div>
+                    <h3>Antioxidant Energy</h3>
+                    <p>Anthocyanins packed in the red center add vitality to your daily life.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🌿</div>
+                    <h3>100% Natural Growth</h3>
+                    <p>We select only the finest premium fruits grown through strict quality control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 5rem 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="container">
+            <p>&copy; 2026 Premium Ruby Kiwi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.onload = reveal;
+    </script>
+</body>
+</html>
